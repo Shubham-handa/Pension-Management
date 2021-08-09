@@ -1,0 +1,72 @@
+<div class="back">
+
+
+<nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+  <a class="navbar-brand" href="#">Pension Disbursement</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/home" >Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/pensionDetail">Pension Detail</a>
+    </li>
+    <li class="nav-item dropdown me-5">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">More</a>
+      <ul class="dropdown-menu dropdown-menu-lg-end">
+        <li><a class="dropdown-item" routerLink="/processPension">Process Pension</a></li>
+        <li><a class="dropdown-item" routerLink="/pensionerByAaadhar">Pensioner Details by Aadhar</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" id="logout" routerLink="/login">Logout</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+
+<!-- <div class="container1"  align="right" >
+
+	<button type="submit"  class="btn-grad"(click)="home()">home</button>
+
+</div> -->
+
+<div class="container" align="center" >
+
+		<form #disbursement="ngForm" (ngSubmit)="pensionDisbursement(disbursement.value)" id="box" ngNativeValidate>
+			<h2 class="edetail">Enter Details</h2><br><br>
+			<table>
+				<tr>
+					<td class="det">Aadhar Number: </td>
+					<td><input type="number" class="form-control" name="aadharNumber" id="aadharNumber" required ngModel /></td>
+				</tr>
+				<tr>
+					<td class="det">Pension Amount: </td>
+					<td><input type="number" class="form-control" name="pensionAmount" id="pensionAmount" ngModel required/></td>
+				</tr>
+				<tr>
+					<td class="det">Bank Charges: </td>
+					<td><input type="number" class="form-control" name="bankCharge" id="bankCharge" ngModel required/></td>
+				</tr><br><br>
+
+			<tr>
+
+                <td colspan="2"><input type="submit" class="form__button" class="btn-grad"
+                    value="Submit"/></td>
+
+            </tr>
+			</table>
+		</form>
+		<div *ngIf="code">
+			<h2>StatusCode:{{code}}</h2>
+		</div>
+		</div>
+
+  </div>
+
+  <footer class="text-center text-white" style="background-color: white;">
+
+    <div class="text-center p-3" style="background-color: white; color: #334756;">
+      © 2021 Copyright:
+      <a class="text" style="color: #334756;" href="#">Cognizant.com</a>
+    </div>
+  </footer>

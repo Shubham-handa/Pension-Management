@@ -1,0 +1,109 @@
+.container
+{
+
+    padding: 20px;
+}
+h1{
+    align-self: center;
+}
+#box {
+    border-radius: 25px;
+    background-position: left top;
+    background-repeat: repeat;
+    background-color:#2f3e46;
+    padding: 20px;
+    width: 470px;
+    height: 470px;
+    align-self: center;
+    margin:10px;
+    border: 3px solid #f1f1f1;
+    color:white;
+  }
+
+.edetail{
+  color:#e5e5e5;
+}
+
+.det{
+  font-size: 20px;
+}
+
+table{
+  border-collapse: separate;
+  border-spacing: 0 15px;
+}
+
+
+.container1
+{
+
+    padding: 20px;
+}
+
+
+.btn-grad{
+  background-color:#0096c7;
+  color:white;
+  border-color: #0096c7;
+  width: 100px;
+  margin-left: 152px;
+  font-family:sans-serif;
+  font-style: normal;
+  border-radius: 5px;
+}
+
+.btn-grad:hover{
+  color:white;
+  background-color:red;
+  border-color:red;
+}
+
+.btn-grad {
+
+
+   text-align: center;
+   text-transform: uppercase;
+
+
+ }
+
+
+ .navbar-brand{
+  color:cadetblue;
+  font-weight:bold;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+
+.nav-link:hover{
+  color:chocolate;
+}
+
+#logout:hover{
+  background-color:red;
+  color:white;
+}
+
+
+.dropdown-item:hover{
+  color:chocolate;
+}
+
+ .navbar-brand:hover{
+  color:chocolate;
+}
+
+.nav-link{
+  color:dimgrey;
+}
+
+.back{
+  background-image: url("https://indianf.com/wp-content/uploads/2020/08/100050882_2614516445531012_2211525407134449664_n-2.jpg");
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+}

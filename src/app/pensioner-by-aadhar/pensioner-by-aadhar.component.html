@@ -1,0 +1,106 @@
+<nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+  <a class="navbar-brand" href="#">Pension Details By Aadhar</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/pensionDetail">Pension Detail</a>
+    </li>
+    <li class="nav-item dropdown me-5">
+      <a
+        class="nav-link dropdown-toggle"
+        data-bs-toggle="dropdown"
+        href="#"
+        role="button"
+        aria-expanded="false"
+        >More</a
+      >
+      <ul class="dropdown-menu dropdown-menu-lg-end">
+        <li>
+          <a class="dropdown-item" routerLink="/processPension"
+            >Process Pension</a
+          >
+        </li>
+        <li>
+          <a class="dropdown-item" routerLink="//pensionDisbursement"
+            >Pension Disbursement</a
+          >
+        </li>
+        <li><hr class="dropdown-divider" /></li>
+        <li>
+          <a class="dropdown-item" id="logout" routerLink="/login">Logout</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- <div class="container1"  align="right" >
+
+	<button type="submit"  class="btn-grad"(click)="home()">home</button>
+
+</div> -->
+<div class="container" align="center">
+  <!-- <h2>Pension By Aadhar</h2> -->
+  <form
+    (ngSubmit)="pensionerByAadhar(pensionDetail.value.aadharNumber)"
+    #pensionDetail="ngForm"
+    id="box"
+    ngNativeValidate
+  >
+    <h2>Enter Details</h2>
+    <br />
+    <h5>Aadhar Number:</h5>
+    <input
+      type="number"
+      class="form-control"
+      name="aadharNumber"
+      id="aadharNumber"
+      required
+      ngModel
+    />
+
+    <br /><br />
+    <input type="submit" class="form__button" value="Submit" class="btn-grad" />
+  </form>
+</div>
+<div class="container">
+  <h2 align="center" class="text-white bg-primary">Pensioner Details</h2>
+
+  <br />
+  <table class="table table-striped table-bordered" align="center" id="t1">
+    <tr>
+      <th>Aadhar Number</th>
+      <th>Name</th>
+      <th>DateOfBirth</th>
+      <th>PAN</th>
+      <th>Salary</th>
+      <th>Allowances</th>
+      <th>Pension Type</th>
+      <th>Bank Name</th>
+      <th>Account Number</th>
+      <th>Bank Type</th>
+    </tr>
+    <tr *ngIf="p">
+      <td>{{ p.aadharNumber }}</td>
+      <td>{{ p.name }}</td>
+      <td>{{ p.dateOfBirth }}</td>
+      <td>{{ p.pan }}</td>
+      <td>{{ p.salaryEarned }}</td>
+      <td>{{ p.allowances }}</td>
+      <td>{{ p.pensionType }}</td>
+      <td>{{ p.bankName }}</td>
+      <td>{{ p.accountNumber }}</td>
+      <td>{{ p.bankType }}</td>
+    </tr>
+  </table>
+</div>
+
+<footer class="text-center text-white" style="background-color: white;">
+
+  <div class="text-center p-3" style="background-color: white; color: #334756;">
+    © 2021 Copyright:
+    <a class="text" style="color: #334756;" href="#">Cognizant.com</a>
+  </div>
+</footer>

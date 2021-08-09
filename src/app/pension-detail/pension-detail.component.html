@@ -1,0 +1,94 @@
+<!-- <div class="container1"  align="right" >
+
+	<button type="submit"  class="btn-grad"(click)="home()">home</button>
+
+</div> -->
+
+<nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+  <a class="navbar-brand" href="#">Pension Detail</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/home" >Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/pensionDisbursement">Pension Disbursement</a>
+    </li>
+    <li class="nav-item dropdown me-5">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">More</a>
+      <ul class="dropdown-menu dropdown-menu-lg-end">
+        <li><a class="dropdown-item" routerLink="/processPension">Process Pension</a></li>
+        <li><a class="dropdown-item" routerLink="/pensionerByAaadhar">Pensioner Details by Aadhar</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" id="logout" routerLink="/login">Logout</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="row">
+
+<div class="col">
+
+    <h2 class="det text-white mt-3">Enter Details</h2>
+    <form (ngSubmit)="getPensionDetail(pensionDetail.value)" #pensionDetail="ngForm" ngNativeValidate>
+        <table class="bg-dark text-white">
+            <tr>
+                <td>Aadhar Number:</td>
+                <td><input type="number" class="form-control" name="aadharNumber" id="aadharNumber" required ngModel /></td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td><input type="text" class="form-control" name="name" id="name" required ngModel/></td>
+            </tr>
+            <tr>
+                <td>DOB:</td>
+                <td><input type="date" class="form-control" name="dateOfBirth" id="dateOfBirth" required ngModel /></td>
+            </tr>
+            <tr>
+                <td>Pan Number:</td>
+                <td><input type="text" class="form-control" name="pan" id="pan" required ngModel/></td>
+            </tr>
+            <tr>
+                <td>Pension Type:</td>
+                <td><input type="text" class="form-control" name="pensionType" id="pensionType" required ngModel/></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="submit" class="form__button"
+                    value="Submit" id="but"/></td>
+            </tr>
+        </table>
+    </form>
+    </div>
+    <div class="col">
+        <h2 class="bg-info text-white mt-3">Pension Details</h2>
+    <table class="table table-striped table-bordered" border="1" class="table"  >
+        <tr class="tr">
+            <th>Name</th>
+            <th>DateOfBirth</th>
+            <th>PAN</th>
+            <th>PensionType</th>
+            <th>pensionAmount</th>
+
+        </tr>
+            <tr *ngIf="p">
+            <td>{{p.name}}</td>
+            <td>{{p.dateOfBirth}}</td>
+            <td>{{p.pan}}</td>
+            <td>{{p.pensionType}}</td>
+            <td>{{p.pensionAmount}}</td>
+
+
+        </tr>
+
+    </table>
+</div>
+    </div>
+    </div>
+    <footer class="text-center text-white" style="background-color: white;">
+
+      <div class="text-center p-3" style="background-color: white; color: #334756;">
+        © 2021 Copyright:
+        <a class="text" style="color: #334756;" href="#">Cognizant.com</a>
+      </div>
+    </footer>

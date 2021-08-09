@@ -1,0 +1,90 @@
+.container
+{
+
+    padding: 20px;
+    box-align: center;
+}
+
+.navbar-brand{
+  color:cadetblue;
+  font-weight:bold;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.navbar-brand:hover{
+  color:chocolate;
+}
+
+.nav-link{
+  color:dimgrey;
+}
+
+.nav-link:hover{
+  color:chocolate;
+}
+
+.dropdown-item:hover{
+  color:chocolate;
+}
+
+#logout:hover{
+  background-color:red;
+  color:white;
+}
+
+#menu{
+  margin-right: 100px;
+}
+
+#carouselExampleFade{
+ min-height: 100px;
+ max-height: 1000px;
+ max-width: 1000px;
+ margin-left: 250px;
+ margin-right: 100px;
+}
+
+.container1
+{
+
+    padding: 20px;
+    align-self: center;
+}
+#box {
+    border-radius: 25px;
+    border-color: dimgray;
+    background-position: left top;
+    background-repeat: repeat;
+    background-color: gainsboro;
+    padding: 20px;
+    width: 400px;
+    height: 250px;
+    align-self: center;
+    margin:10px;
+    border: 3px solid #f1f1f1;
+    top: 300px;
+    left:500px;
+  }
+
+
+.btn-grad {background-image: linear-gradient(to right, #e47c7c86 0%, #98dfe0  51%, #e7e978  100%)}
+.btn-grad {
+
+   padding: 5px;
+   text-align: center;
+   text-transform: uppercase;
+   transition: 0.5s;
+   border-radius: 10px;
+
+ }
+
+.dropdown-menu{
+  margin-right: 50px;
+}
+
+ footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+}

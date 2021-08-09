@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-md">
+        <a class="navbar-brand " href="#">Pension Management System</a>
+        <a class="navbar-brand" href="#">Developers Info</a>
+      </div>
+    </nav>
+    <div class="cred">
+      <h3 class="credential">Enter the Credentials</h3>
+    </div>
+
+    <div class="container7 mt-5">
+      <h3 class="text-center">Login</h3>
+      <form
+        (ngSubmit)="onSubmit(loginForm.value)"
+        #loginForm="ngForm"
+        ngNativeValidate
+      >
+        <i class="det">Username:</i>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Enter your username"
+          name="userName"
+          id="userName"
+          required
+          ngModel
+        /><br />
+        <i class="det">Password: </i
+        ><input
+          type="password"
+          class="form-control"
+          placeholder="Enter your password"
+          name="password"
+          id="password"
+          required
+          ngModel
+        /><br />
+        <button type="submit" class="btn btn-primary mt-3">Login</button><br />
+
+        <p>{{ message }}</p>
+
+      </form>
+    </div>
+
+    <footer class="text-center text-white" style="background-color: white;">
+
+      <div class="text-center p-3" style="background-color: white; color: #334756;">
+        © 2021 Copyright:
+        <a class="text" style="color: #334756;" href="#">Cognizant.com</a>
+      </div>
+    </footer>
+  </body>
+</html>

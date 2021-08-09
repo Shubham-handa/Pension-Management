@@ -1,0 +1,72 @@
+<nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+  <a class="navbar-brand" href="#">Pension Management System</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" role="button" (click)="pensionerDetails()">Pensioner Details</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" role="button" (click)="pensionDisbursement()">Pension Disbursement</a>
+    </li>
+    <li class="nav-item dropdown me-5">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">More</a>
+      <ul class="dropdown-menu dropdown-menu-lg-end">
+        <li><a class="dropdown-item" (click)="pensionDetail()" role="button">Pension Detail</a></li>
+        <li><a class="dropdown-item" (click)="processPension()" role="button">Process Pension</a></li>
+        <li><a class="dropdown-item" (click)="pensionerByAaadhar()" role="button">Pensioner Details by Aadhar</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" id="logout"  (click)="logout()" role="button">Logout</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade mt-3" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://wp.sqrrl.in/wp-content/uploads/2018/11/NPS-1920x1080.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.pinimg.com/originals/51/6c/c0/516cc0e801b99cac805aed7dffbfe21d.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://insummary.in/wp-content/uploads/2017/04/APY-1.jpg" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+<footer class="text-center text-white" style="background-color: white;">
+
+  <div class="text-center p-3" style="background-color: white; color: #334756;">
+    © 2021 Copyright:
+    <a class="text" style="color: #334756;" href="#">Cognizant.com</a>
+  </div>
+</footer>
+
+
+
+
+
+<!-- <h1 align="center">Pension Management System</h1>
+
+	<form align="center">
+<div class="container" align="center"  >
+	<button  (click)="pensionerDetails()" class="btn-grad">Pensioner Details</button>
+	<br><br>
+    <button  (click)="pensionDisbursement()" class="btn-grad">Pension Disbursement</button><br><br>
+	<button  (click)="pensionDetail()" class="btn-grad">Pension Detail</button><br><br>
+	<button  (click)="processPension()" class="btn-grad">Process Pension</button><br><br>
+	<button  (click)="pensionerByAaadhar()" class="btn-grad">Pensioner Details by Aadhar</button><br><br>
+	<button type="submit"  class="btn-grad"(click)="logout()">logout</button>
+</div>
+</form>
+
+ -->

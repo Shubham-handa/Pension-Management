@@ -1,0 +1,101 @@
+<!-- <div class="container1"  align="right" >
+
+	<button type="submit"  class="btn-grad"(click)="home()">home</button>
+
+</div> -->
+<nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+  <a class="navbar-brand" href="#">Process Pension</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/pensionDisbursement">Pension Disbursement</a>
+    </li>
+    <li class="nav-item dropdown me-5">
+      <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">More</a>
+      <ul class="dropdown-menu dropdown-menu-lg-end">
+        <li><a class="dropdown-item" routerLink="/pensionDetail">Pension Detail</a></li>
+        <li><a class="dropdown-item" routerLink="/pensionerByAaadhar">Pensioner Details by Aadhar</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" id="logout" routerLink="/login">Logout</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<!-- <h1>Process Pension</h1> -->
+<div class="container mt-5">
+  <div class="row">
+<div class="col"   align="center">
+
+		<form #processPensiondetails="ngForm" (ngSubmit)="processPension(processPensiondetails.value)" id="box" ngNativeValidate >
+			<h2 class="text-warning">Enter the Details</h2>
+			<table class="mt-4">
+				<tr>
+					<td class="txti">Aadhar Number: </td>
+					<td><input type="number" class="form-control" name="aadharNumber" id="aadharNumber" required ngModel /></td>
+				</tr><br>
+				<tr>
+					<td class="txti">Pension Amount: </td>
+					<td><input type="number" class="form-control" name="pensionAmount" id="pensionAmount" required ngModel/></td>
+				</tr><br>
+				<tr>
+					<td class="txti">Bank Charge: </td>
+					<td><input type="number" class="form-control" name="bankCharge" id="bankCharge" required ngModel /></td>
+				</tr><br>
+				<tr>
+					<td colspan="2"><input type="submit" class="form__button"
+						value="Submit" id="sub"/>
+					</td>
+				</tr><br>
+            </table>
+			</form>
+			<div *ngIf="processPensionOutput">
+			<h2>StatusCode:{{processPensionOutput}}</h2>
+		</div>
+    </div>
+    <div class="col">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade mt-3" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://finserving.com/wp-content/uploads/2017/11/NPS-National-Pension-Scheme-India-All-You-Need-to-Know.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://i.pinimg.com/originals/51/6c/c0/516cc0e801b99cac805aed7dffbfe21d.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://pbs.twimg.com/media/EKXq4oJVUAAWk1x.jpg:large" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://lh5.googleusercontent.com/cx2fWSL9l4HynihxyjkuNZlSJaZUpXtPawx7mHBA4-VEkXAj4ehrkIX6aHtpvviC2gGP_ixrATJ6R54CSjey-86ro91hhJax8lMA0XLLzyMNkdf9YBWqYrkeIc03xerWiCg4DZWs" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://www.goodmoneying.com/wp-content/uploads/2013/01/126.lic-jeevan-nidhi.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    </div>
+    </div>
+</div>
+
+<footer class="text-center text-white" style="background-color: white;">
+
+  <div class="text-center p-3" style="background-color: white; color: #334756;">
+    © 2021 Copyright:
+    <a class="text" style="color: #334756;" href="#">Cognizant.com</a>
+  </div>
+</footer>
+
+
+
+
